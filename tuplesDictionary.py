@@ -9,11 +9,11 @@ def firstName(name):
     return name[:name.index(' ')]
 
 if __name__=="__main__":
-    name=str(input("Enter the name of the person whose details ypu want to know : \n"))
+    name=str(input("Enter the name of the person whose details you want to know : \n"))
     while name != "":
         if name in dictionary.keys() or name in list(map(firstName,dictionary.keys())):
             try:
-                print(f"\nPhone number : {dictionary[name][0]}\nVillage : {dictionary[name][2]}\nRank : {dictionary[name][1]}")
+                print(f"\nPhone number : {dictionary[name][0]}\nVillage : {dictionary[name][2]}\nRank : {dictionary[name][1]}\n")
             except KeyError:
                 print("Please Enter Full Name")
         else:

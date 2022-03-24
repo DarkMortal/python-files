@@ -7,6 +7,6 @@ if __name__=="__main__":
             for y in range(1,n)
             for z in range(1,n)
             if x*x+y*y == z*z]
-    print("Fitst",x,"triplets between 1 and",n)
+    print("First",x,"triplets between 1 and",n)
     for i in triplets[0:x]:
         print(i)
