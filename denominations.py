@@ -10,11 +10,10 @@ def coin(arr,value):
     if rem==0:
         return [arr[0]]*count
     else:
-        arr2=list(filter(lambda x:rem%x==0,arr[1:len(arr)]))
-        if arr2:
-            return [arr[0]]*count+[arr2[0]]
-        else:
-            return coin(arr[1:len(arr)],value)
+        for i in arr[1:len(arr)]:
+            if rem%i==0:
+                return [arr[0]]*count+[i]*(int(rem/i))
+        return coin(arr[1:len(arr)],value)
 
 if __name__=="__main__":
     denominations=[]
