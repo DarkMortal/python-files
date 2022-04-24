@@ -6,7 +6,7 @@ def solve(x,y,a):
 
     degree = len(x)-1
 
-    for i in x[0:len(x)]:
+    for i in x:
         temp = []
         for j in range(len(x)):
             temp.append(i**(degree-j))
