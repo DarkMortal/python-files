@@ -12,4 +12,4 @@ if __name__ == "__main__":
     for i in range(1,n):
         x += (2*f(a+i*d) if i%2 == 0 else 4*f(a+i*d))
     x *= d/3
-    print(x)
+    print(round(x,3))
