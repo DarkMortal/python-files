@@ -1,6 +1,6 @@
 from math import pi 
 
-abs = lambda x: (x if x>0 else x*(-1))
+abs = lambda x: (x if x>=0 else x*(-1))
 
 if __name__ == "__main__":
     n = int(input())
