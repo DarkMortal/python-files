@@ -8,3 +8,11 @@ if __name__ == "__main__":
     print("Mean =",round(m,3))
     print("Variance =",round(v,3))
     print("Standard Deviation =",round(sqrt(v),3))
+
+'''Output
+
+Mean = 2.294
+Variance = 1.031
+Standard Deviation = 1.015
+
+'''

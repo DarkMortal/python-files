@@ -15,3 +15,5 @@ if __name__ == "__main__":
     x = [2,3,5,6,7]
     y = [5,7,11,13,15]
     print(round(cors(x,y),3))
+
+#Output: 1.0

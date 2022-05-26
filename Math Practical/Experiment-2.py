@@ -11,3 +11,5 @@ if __name__ == "__main__":
         x += f(a+i*d)
     x *= d
     print(round(x,3))
+
+#Output: 0.848

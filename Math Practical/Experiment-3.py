@@ -13,3 +13,5 @@ if __name__ == "__main__":
         x += (2*f(a+i*d) if i%2 == 0 else 4*f(a+i*d))
     x *= d/3
     print(round(x,3))
+
+#Output: 3.905
