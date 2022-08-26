@@ -17,7 +17,6 @@ def open_space_finder(board):
             if board[a][b] == '-':
                 return word_finder([a, b], board)
 
-
 def word_finder(open_space, board):
     word_place =[]
     x = open_space[0]
@@ -81,7 +80,6 @@ def fill_down(place_list, board):
             x=len(board)
     return place_list
 
-
 def fill_across(place_list, board):
     where_to_start = place_list[len(place_list)-1]
     x = where_to_start[0]
@@ -93,7 +91,6 @@ def fill_across(place_list, board):
         else:
             y = len(board[x])
     return place_list
-
 
 def word_placer(place_list, board, words):
     words_that_fit = [X for X in words if len(X) == len(place_list)]
@@ -114,7 +111,9 @@ def word_placer(place_list, board, words):
                 buzz = fill_board(board1, words1)
                 break
     return False
+
 first_board = []
+
 for x in range(10):
     string = input()
     string_list =list(string)

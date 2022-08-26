@@ -1,5 +1,7 @@
 import math
 
+'''PS : Find the number of ways that a given integer, X, can be expressed as the sum of the Nth powers of unique, natural numbers.'''
+
 def recurse(X,N,arr):
     if X == 0:
         return 1
