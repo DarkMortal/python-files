@@ -45,7 +45,7 @@ def findWays(n):
     if(n & 1):
         return 0
     # Otherwise return n/2'th Catalan Numer
-    return catalan(int(n / 2))
+    return catalan(int(n >> 1))
 
 class Solution:
     def recurse(self, m:int, n:int, total:int, string = ""):
@@ -62,11 +62,11 @@ class Solution:
 
     def generateParenthesis(self, n: int):
         parenthesis.clear()
-        self.recurse(n,n,findWays(2*n))
+        self.recurse(n,n,findWays(n << 1))
         return parenthesis
 
 s = Solution()
-arr = s.generateParenthesis(1)
+arr = s.generateParenthesis(3)
 
 for i in arr:
     print(i)
