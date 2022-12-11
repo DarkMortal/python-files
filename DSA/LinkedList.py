@@ -26,30 +26,15 @@ class Solution(object):
         currentL = resL.next
         next1 = l1.next
         next2 = l2.next
-        while next1.next!=None and next2.next!=None:
+        while next1.next!=None or next2.next!=None:
             r = next1.val + next2.val + carry
             carry = int(r/10)
-            currentL.value = r%10
+            currentL.val = r%10
             currentL.next = ListNode(0)
             currentL = currentL.next
-            next1 = next1.next
-            next2 = next2.next
-        if next1.next!=None:
-            while next1.next!=None:
-                r = next1.val + carry
-                carry = int(r/10)
-                currentL.value = r%10
-                currentL.next = ListNode(0)
-                currentL = currentL.next
-                next1 = next1.next
-        if next2.next!=None:
-            while next2.next!=None:
-                r = next2.val + carry
-                carry = int(r/10)
-                currentL.value = r%10
-                currentL.next = ListNode(0)
-                currentL = currentL.next
-                next2 = next2.next
+            next1 = (ListNode(0) if next1.next == None else next1.next)
+            next2 = (ListNode(0) if next2.next == None else next2.next)
+            
         r = next1.val + next2.val + carry
         if r>=10:
             currentL.val = r%10
@@ -58,11 +43,20 @@ class Solution(object):
             currentL.val = r
         return resL
 
-l1 = ListNode(val= 2, next= ListNode(val= 4, next= ListNode(val= 7, next= None)))
-l2 = ListNode(val= 5, next= ListNode(val= 6, next= ListNode(val= 4, next= None)))
+l1 = ListNode(val= 2, next= ListNode(val= 4, next= ListNode(val= 7)))
+l2 = ListNode(val= 5, next= ListNode(val= 6, next= ListNode(val= 4)))
+l3 = ListNode(val= 2, next= ListNode(val= 4, next= ListNode(val= 7, next= ListNode(5))))
 
-l3 = Solution().addTwoNumbers(l1,l2)
+l4 = Solution().addTwoNumbers(l1,l2)
+l4 = Solution().addTwoNumbers(l4,l3)
 
 disp(l1)
 disp(l2)
 disp(l3)
+disp(l4)
+
+# Output
+# 742
+# 465
+# 5742
+# 6949
