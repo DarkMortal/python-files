@@ -46,17 +46,35 @@ class Solution(object):
 l1 = ListNode(val= 2, next= ListNode(val= 4, next= ListNode(val= 7)))
 l2 = ListNode(val= 5, next= ListNode(val= 6, next= ListNode(val= 4)))
 l3 = ListNode(val= 2, next= ListNode(val= 4, next= ListNode(val= 7, next= ListNode(5))))
-
-l4 = Solution().addTwoNumbers(l1,l2)
-l4 = Solution().addTwoNumbers(l4,l3)
+l4 = ListNode(val= 5, next= ListNode(val= 6, next= ListNode(val= 4, next= ListNode(4, next= ListNode(3)))))
 
 disp(l1)
 disp(l2)
+print()
+
 disp(l3)
 disp(l4)
+print()
 
-# Output
-# 742
-# 465
-# 5742
-# 6949
+l2 = Solution().addTwoNumbers(l1,l2)
+l4 = Solution().addTwoNumbers(l4,l3)
+
+disp(l2)
+disp(l4)
+
+print()
+l4 = Solution().addTwoNumbers(l4,l2)
+disp(l4)
+
+'''Output
+742
+465
+
+5742
+34465
+
+1207
+40207
+
+41414
+'''
