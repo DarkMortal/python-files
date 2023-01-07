@@ -50,9 +50,7 @@
 - <b>fileHandling.py</b>
 
       What's the matter clown?
- 
       Are you angry, humiliated, is that it?
-
       Fool, you don't know what humiliation is.
 - <b>instanceChecking.py</b>
 
