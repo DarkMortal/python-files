@@ -26,7 +26,7 @@ def smart_fact(func):
             raise ArithmeticError("Argument can't be less than 0")
         if isinstance(args[0], float):
             from math import gamma
-            return gamma(args[0])
+            return gamma(args[0]+1.0)
         else:
             return func(*args, **kwargs)
 
