@@ -70,3 +70,9 @@
     Phone number : 1234567890
     Village : Hidden Rain
     Rank : Genin
+
+[-] iterators.py
+
+    1 4 2 5 3 -2 -1 6 
+    1 4 2 5 3 -2 -1 6 
+    3 9 5 11 7 -3 -1 13
