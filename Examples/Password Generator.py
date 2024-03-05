@@ -11,3 +11,6 @@ def generatePassword(length: int) -> str:
     for i in range(length):
         password.append(secrets.choice(character_list))
     return "".join(password)
+
+if __name__ == "__main__":
+    print(f"Generated password: {generatePassword(int(input('Enter length of password: ')))}")
